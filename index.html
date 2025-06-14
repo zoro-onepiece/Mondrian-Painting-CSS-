@@ -6,24 +6,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mondrian Project</title>
   <style>
-    /* 
-    Write your CSS here 
-    Gap Colour: #000
-    White: #F0F1EC
-    Red: #E72F24
-    Black: #232629
-    Blue: #004592
-    Yellow: #F9D01E
 
-    For dimensions, see dimensions.png image.
-    HINT: Remember you can't change the properties of grid lines.
-    But grid lines are transparent!
-    */
+
+   .parent{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+   height:  100vh;
+   }
+
+    .grid-container{
+    
+      height: 748px;
+      width: 748px;
+      display: grid;
+      grid-template-rows: 414px 295px 20px;
+      grid-template-columns: 1fr 198px 153px 50px ;
+      gap: 9px;
+      background-color:  #000;
+   
+    }
+  
+    #m1{
+      grid-area: 1/2/2/5 ;
+    }
+
+
+    #m3{
+     grid-area: 2/2/3/4;
+    }
+
+  
+  .blue{
+   border-bottom: 10px solid black;
+   height: 130px;
+  }
+
+  .f{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+  }
+
+
+  #m4b{
+    width: 50px ; 
+    height:175px; 
+    background-color: #F0F1EC;
+    /* grid-column: 4 /5;
+    grid-row: 2/3; */
+    
+  }
+
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+   <div class="parent">
+        
+  <div class="grid-container">
+
+    <div class="red"  style="background-color: red;"></div>
+    <div id="m1"  class="white" style="background-color: #F0F1EC;"></div>
+    <div  id="m2" style="background-color: #F0F1EC;"></div>
+    <div id="m3"  style="background-color: #F0F1EC;"></div>
+ <div class="f">
+    <div  id="m4a" class="blue" style="background-color: #004592;"></div>
+    <div id="m4b"  ></div>
+    </div>
+ 
+    <div  id="m5" style="background-color: #F0F1EC;"></div>
+    <div id="m6" width="198px" style="background-color: #F9D01E;"></div>
+    <div id="m7" style="background-color: #232629; width: 153px;"  ></div>
+    
+
+  </div>
+  </div>
+
+
 </body>
 
 </html>
